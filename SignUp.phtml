@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sign UP</title>
+<link rel="stylesheet" href="CSS/desSign.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<style>
+   p{
+   
+    color: red;
+    padding-top:90px;
+   margin-left:10px;
+    font-size: 16px;
+    font-weight: bold ;
+ 
+     } 
+</style>
+
+
+</head>
+<html>    
+<body>
+
+<p class="Wrong"> <?php if(isset($usernameError)) echo  $usernameError ?>      </p>
+<p class="Wrong"> <?php if(isset($emailError)) echo  $emailError ?>            </p>
+<p class="Wrong"> <?php if(isset($$passwordError)) echo  $$passwordError ?>      </p>
+<p class="Wrong"><?php if(isset($$passwordConfErr)) echo  $$passwordConfErr ?>  </p>
+<p class="Wrong"> <?php if(isset($$phoneError)) echo  $$phoneError ?>          </p> 
+<p class="Wrong"> <?php if(isset($$addresseError)) echo  $$addresseError ?>    </p> 
+
+
+    <div class="box">
+    <h2>Create your Accounte </h2>
+<form name="f" action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" > 
+
+
+
+<div class="inputBox">
+<input id="Name" type="text" name="username"required="" >
+<label><i class="fas fa-user-check" ></i> Name </label>
+</div>
+
+<div class="inputBox">
+<input id="LastName" type="Email" name="email"" required="" >
+<label><i  class="fas fa-envelope"  aria-placeholder="*Exemple : Folen@Gmail.com"></i> Email </label>
+</div>
+
+
+<div class="inputBox">
+<input id="Date" type="password" name="password" required="">
+<label><i class="fas fa-lock" aria-placeholder="*Minimum 8 Caraters"></i> Password </label>
+</div>
+
+<div class="inputBox">
+<input id="Date" type="password" name="confirmPassword" required="">
+<label><i class="fas fa-lock" aria-placeholder="*Minimum 8 Caraters" name="confirmPassword"></i> Confirmez Votre Password </label>
+</div>
+
+<div class="inputBox">
+<input id="phone" type="text" name="phone" required="">
+<label><i class="fas fa-phone-square" ></i> Phone Number </label>
+</div>
+
+<div class="inputBox">
+<input id="Date" type="text" name="addresse" required="">
+<label><i   class="fas fa-map-marker-alt"  ></i> Addresse</label>
+</div>
+
+<div class="text-center">
+<input type="submit" name="signUp" value="Sign Up " >
+
+<input type="reset" name="" value="Annuler" >
+</div>
+<div class="all">   
+                        Already have a account ?<a href="Login.php" class="allready"> Login </a>
+                    </div>           
+</form>
+</div>
+</body>
+</html>
