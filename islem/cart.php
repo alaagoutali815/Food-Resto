@@ -31,6 +31,9 @@ header('Location: index.php');
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <br>
+            <br>
+            <br>
             <?php if (isset($_GET['order']) && $_GET['order'] == 'success') {
             ?>
                 <strong>Votre commande a été enregistré avec success. <a href="index.php">Revenir à la page d'accueil</a></strong>
@@ -107,6 +110,9 @@ header('Location: index.php');
                                 Save
                             </a>
                         </div>
+                        <br>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>

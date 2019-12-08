@@ -17,7 +17,7 @@ if (isset($_GET['vider'])) {
 
 <div class="row">
     <div class="col-md-12">
-        <a href="cart.php" class="shopping-cart-button float-right" data-toggle="shopping-cart-dropdown">
+        <a style="color: #fff" href="cart.php" class="shopping-cart-button float-right" data-toggle="shopping-cart-dropdown">
             <i class="fa fa-shopping-cart"></i>
             <span class="text">Shopping Cart (<?= $nProductsCart ?>)</span>
         </a>
@@ -26,6 +26,7 @@ if (isset($_GET['vider'])) {
 <div class="container">
     <h3 class="h3">FooD</h3>
     <div class="row">
+        <div class="col-md-12">
         <a href="update.php" class="btn btn-primary">Reservation</a>
          <table class="table">
             <tr>
@@ -77,7 +78,5 @@ if (isset($_GET['vider'])) {
                 }
             ?>
     </div>
+    </div>
 </div>
-<hr>
-
-<hr>
