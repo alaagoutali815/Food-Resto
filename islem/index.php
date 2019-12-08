@@ -26,6 +26,7 @@ if (isset($_GET['vider'])) {
 <div class="container">
     <h3 class="h3">FooD</h3>
     <div class="row">
+        <a href="update.php" class="btn btn-primary">Reservation</a>
          <table class="table">
             <tr>
                 <th>id</th>    
