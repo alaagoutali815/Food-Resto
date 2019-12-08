@@ -1,9 +1,19 @@
-
+<?php
+if (!empty($_POST)) {
+    require_once('Product.class.php');
+    $product = new Product;
+    $product->addProduct($_POST['pid'], $_POST['Name'],$_POST['Desription'],$_POST['Price'],$_POST['File'],$_POST['stock_qte']);
+    header('Location:index.php?notif=add');
+    exit();
+}
+?>
 <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+
 
 <?php include('../../includes/header.php'); ?>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
+
 
     <!-- Navbar -->
     <?php include('../../includes/nav.php') ?>
@@ -18,16 +28,18 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fuild">
-                <div class="row mb-2">
-                    <div class="col-sm-10">
-                        <h1 class="m-0 text-dark"><i class="fas fa-hamburger"></i> Produits</h1>
-                    </div><!-- /.col -->
+                <form method="post">
+                    <div class="row mb-2">
+                        <div class="col-sm-10">
 
-                    <div class="col-sm-2 float-right">
-                        <button type="button" class="btn sticky-top btn-block btn-primary .btn-sm float-right"> <i class="far fa-save"></i> Enregistrer</button>
+                            <h1 class="m-0 text-dark"><i class="fas fa-hamburger"></i> Produits</h1>
+                        </div><!-- /.col -->
 
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
+                        <div class="col-sm-2 float-right">
+                            <button type="submit" class="btn sticky-top btn-block btn-primary .btn-sm float-right"> <i class="far fa-save"></i> Enregistrer</button>
+
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
@@ -50,59 +62,59 @@
 
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <form>
-
-                                    <div class="col-lg-12">
 
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="text">Nom de Produit</label>
-                                        <input id="text" name="text" placeholder="Ex : Pizza Neptune" type="text" required="required" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="textarea">Descreption</label>
-                                        <textarea id="editor1" name="textarea" cols="40" rows="5" class="form-control"></textarea>
-                                        <script>
-                                            CKEDITOR.replace( 'editor1' );
-                                        </script>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label for="Price">Prix</label>
-                                                <div class="input-group">
-                                                    <input id="Price" name="Price" placeholder="Ex : 10DT" type="text" class="form-control">
-                                                    <div class="input-group-append">
-                                                        <div class="input-group-text">DT</div>
-                                                    </div>
+                                <div class="col-lg-12">
+
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Nom de Produit</label>
+                                    <input id="Name" name="Name" placeholder="Ex : Pizza Neptune" type="text" required="required" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="textarea">Descreption</label>
+                                    <textarea id="Desription" name="Desription" cols="40" rows="5" class="form-control"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'Desription' );
+                                    </script>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="Price">Prix</label>
+                                            <div class="input-group">
+                                                <input id="Price" name="Price" placeholder="Ex : 10DT" type="text" class="form-control">
+                                                <div class="input-group-append">
+                                                    <div class="input-group-text">DT</div>
                                                 </div>
                                             </div>
-                                            <!-- end form item -->
-
                                         </div>
-                                        <!--end form item box -->
-                                        <div class="col-lg-3">
-                                            <div class="form-group">
-                                                <label for="stock_qte">Quantité en Stock</label>
-                                                <input id="stock_qte" name="stock_qte" placeholder="Ex : 5" type="text" class="form-control">
-                                            </div>
+                                        <!-- end form item -->
 
-                                        </div>
-
-                                        <div class="col-lg-3">
-
-                                            <div class="form-group">
-                                                <label for="pid">PID</label>
-                                                <input id="pid" name="pid" type="text" class="form-control">
-                                            </div>
+                                    </div>
+                                    <!--end form item box -->
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label for="stock_qte">Quantité en Stock</label>
+                                            <input id="stock_qte" name="stock_qte" placeholder="Ex : 5" type="text" class="form-control">
                                         </div>
 
                                     </div>
-                                    <div class="form-group">
-                                        <label for="pid">Ajouter une image</label>
-                                        <input id="pid" name="pid" type="file" class="form-control">
+
+                                    <div class="col-lg-3">
+
+                                        <div class="form-group">
+                                            <label for="pid">PID</label>
+                                            <input id="pid" name="pid" type="text" class="form-control">
+                                        </div>
                                     </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="pid">Ajouter une image</label>
+                                    <input id="File" name="File" type="file" class="form-control">
+                                </div>
 
 
 
@@ -121,6 +133,7 @@
 
     </div>
     <!-- /.row (main row) -->
+    </form>
 </div><!-- /.container-fluid -->
 </form>
 

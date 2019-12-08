@@ -1,5 +1,5 @@
 <?php
-include 'Product.class.php';
+include 'Vehicule.class.php';
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];

@@ -34,111 +34,31 @@ $ROOT = '../../';
 
                         </p>
                     </a>
-                    <!--                        <ul class="nav nav-treeview">-->
-                    <!--                            <li class="nav-item">-->
-                    <!--                                <a href="./index.html" class="nav-link active">-->
-                    <!--                                    <i class="far fa-circle nav-icon"></i>-->
-                    <!--                                    <p>Dashboard v1</p>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li class="nav-item">-->
-                    <!--                                <a href="./index2.html" class="nav-link">-->
-                    <!--                                    <i class="far fa-circle nav-icon"></i>-->
-                    <!--                                    <p>Dashboard v2</p>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                            <li class="nav-item">-->
-                    <!--                                <a href="./index3.html" class="nav-link">-->
-                    <!--                                    <i class="far fa-circle nav-icon"></i>-->
-                    <!--                                    <p>Dashboard v3</p>-->
-                    <!--                                </a>-->
-                    <!--                            </li>-->
-                    <!--                        </ul>-->
-                </li>
+                    
+                </li
 
+                >
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-shopping-basket"></i>
-                        <p>
-                            Commandes
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Nouvelles Commandes <span class="right badge badge-danger">New</span></p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/boxed.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Toutes les commandes</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Commandes annulées</p>
-                            </a>
-                        </li>
-
-
-
-
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-truck"></i>
-                        <p>
-                            Dilevery
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/charts/chartjs.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Véhicules</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Historique Livrasion</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="../Products" class="nav-link">
                         <i class="fas fa-hamburger"></i>
                         <p>
                             Produits
-                            <i class="fas fa-angle-left right"></i>
+
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/UI/general.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Catégories</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../Products" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Menu</p>
-                            </a>
-                        </li>
 
-
-                    </ul>
                 </li>
+                <li class="nav-item has-treeview">
+                    <a href="../Orders" class="nav-link">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>
+                            Commandes
+
+                        </p>
+                    </a>
+
+                </li>
+
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="fas fa-user-friends"></i>
@@ -148,7 +68,20 @@ $ROOT = '../../';
                         </p>
                     </a>
 
-                </li>                    <li class="nav-item has-treeview">
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="../Vehicules" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <p>
+                            Vehicules
+
+                        </p>
+                    </a>
+
+                </li>
+
+                <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="fas fa-sign-out-alt"></i>
                         <p>

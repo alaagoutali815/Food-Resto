@@ -46,9 +46,6 @@ $(function () {
     window.alert('You chose: ' + start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
   })
 
-  /* jQueryKnob */
-  $('.knob').knob()
-
 
 
 

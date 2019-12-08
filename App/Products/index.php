@@ -1,5 +1,3 @@
-
-
 <?php include('../../includes/header.php'); ?>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -14,6 +12,17 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+
+        <?php if (isset($_GET['notif'])): ?>
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <?php
+                if ($_GET['notif'] == 'add') echo 'Produit ajouté avec succés';
+                if ($_GET['notif'] == 'update') echo 'Produit modifié avec succés';
+                if ($_GET['notif'] == 'delete') echo 'Produit supprimé avec succés';
+                ?>
+            </div>
+        <?php endif ?>
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
@@ -61,7 +70,7 @@
                                         <th>Produit</th>
                                         <th>Prix</th>
                                         <th>Qunatité en Stock</th>
-                                        <th>Catégorie</th>
+                                        <th>Description</th>
                                         <th>Actions</th>
                                     </tr>
                                     </thead>
@@ -71,14 +80,14 @@
                                     ?>
                                     <tr>
                                         <td><input type="checkbox" value="<?= $data['pid'] ?>"</td>
-                                        <td><img src="<?= $data['File'] ?>"/> <?= $data['Name'] ?></td>
+                                        <td><img src=" <?= $data['File'] ?>" width="75"/> <?= $data['Name'] ?></td>
                                         <td><?= $data['Price'] ?></td>
                                         <td><?= $data['stock_qte'] ?></td>
-                                        <td><?= $data['Descr'] ?></td>
+                                        <td><?= $data['Desription'] ?></td>
                                         <td>
-                                            <a href="edit.php?pid=<?= $data['pid'] ?>"" class="btn btn-app"><i class="fas fa-edit"></i>Modifier</a>
+                                            <a  href="editform.php?pid=<?= $data['pid'] ?>"" class="btn btn-app"><i class="fas fa-edit"></i>Modifier</a>
                                             <a href="view.php?pid=<?= $data['pid'] ?>"" class="btn btn-app"><i class="fas fa-eye"></i>Consulter</a>
-                                            <a href="delete.php?pid=<?= $data['pid'] ?>"" class="btn btn-app"><i class="fas fa-trash"></i>Supprimer</a>
+                                            <a onclick="return confirm('Voulez vous supprimer cet élement?');" href="delete.php?pid=<?= $data['pid'] ?>" class="btn btn-app delete-object"><i class="fas fa-trash"></i>Supprimer</a>
                                         </td>
 
 
@@ -115,6 +124,7 @@
 <!-- DataTables -->
 <script src="../../plugins/datatables/jquery.dataTables.js"></script>
 <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.3.2/bootbox.min.js"></script>
 
 
 
@@ -130,4 +140,7 @@
             "autoWidth": false,
         });
     });
+
+
 </script>
+
